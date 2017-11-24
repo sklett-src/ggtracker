@@ -35,7 +35,7 @@ class ReplaysController < ApplicationController
         xml.instruct!
         xml.uploadResult(docVersion: '1.0') {
           xml.errorCode(403)
-          xml.message('Uploading from Sc2gears requires a GGTracker Pro subscription.  See http://ggtracker.com/go_pro for more.')
+          xml.message('Uploading from Sc2gears requires a GGTracker Pro subscription.  See http://gggreplays.com/go_pro for more.')
           xml.replayUrl('')
         }
         render(xml: xml.target!, status: 200) and return

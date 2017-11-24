@@ -2,18 +2,18 @@ Ggtracker::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Assets are served via S3
-  # TODO: A record for s3.*.ggtracker.com for nice hostnames.
-  # config.action_controller.asset_host = "http://s3.ggtracker.com.s3.amazonaws.com"
+  # TODO: A record for s3.*.gggreplays.com for nice hostnames.
+  # config.action_controller.asset_host = "http://s3.gggreplays.com.s3.amazonaws.com"
   #
   # comment out the next line for good Proxino error messages
-#  config.action_controller.asset_host = "http://a1.ggtracker.com"
+#  config.action_controller.asset_host = "http://a1.gggreplays.com"
 
   # http://stackoverflow.com/questions/10218998/switch-asset-host-for-controller
   config.action_controller.asset_host = Proc.new { |source, request = nil, *_|
 #    if source.end_with?('png') || source.end_with?('gif') || source.end_with?('jpg')
 #      ''
 #    else
-      request && request.ssl? ? 'https://ggtracker.com' : 'http://a1.ggtracker.com'
+      request && request.ssl? ? 'https://gggreplays.com' : 'http://a1.gggreplays.com'
 #    end
   }
 

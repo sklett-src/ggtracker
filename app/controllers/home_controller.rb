@@ -68,9 +68,9 @@ paypal cancellation result details: #{full_details}<br><br>
       $leaders_age = Time.now
     end
 
-    @recruiting_url = "http://ggtracker.com/hiring"
+    @recruiting_url = "http://gggreplays.com/hiring"
     if signed_in?
-      @recruiting_url = "http://ggtracker.com/hiring?ref=#{current_user.id}"
+      @recruiting_url = "http://gggreplays.com/hiring?ref=#{current_user.id}"
     end
   end
 end

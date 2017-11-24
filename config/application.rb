@@ -62,12 +62,12 @@ module Ggtracker
     # set the default url options for ActionMailer
     # obviously, this will produce links that don't work in development, but..
     # really.
-    config.action_mailer.default_url_options = { :host => 'ggtracker.com' }
+    config.action_mailer.default_url_options = { :host => 'gggreplays.com' }
 
     # ActionMailer smtp setup
     config.action_mailer.smtp_settings = {
       :address => 'smtp.postmarkapp.com',
-      :domain => 'ggtracker.com',
+      :domain => 'gggreplays.com',
       :user_name => secret('smtp_user_name'),
       :password => secret('smtp_password')
     }
