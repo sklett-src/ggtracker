@@ -85,7 +85,15 @@ gg.run(['$rootScope', '$window', '$http', function($rootScope, $window, $http) {
     $window.gg.state.apply(false);
   }, true);
 
-  gg.settings.api_host = ($window.gon != undefined) ? $window.gon.global.api_host : '127.0.0.1:9292';
+console.log('angular.js !#! : window.gon, window.gon.global.api_host')
+console.log($window.gon != undefined)
+console.log($window.gon.global.api_host)
+
+// TODO SKLETT DANGEROUS WORKAROUND
+  gg.settings.api_host = ($window.gon != undefined) ? 'gggreplays.com:9292' : 'gggreplays.com:9292';
+//  gg.settings.api_host = ($window.gon != undefined) ? $window.gon.global.api_host : '127.0.0.2:9292';
+
+
   
   // Finally, just default window.gon to an empty object if it's not defined.
   if(typeof $window.gon == 'undefined')

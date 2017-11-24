@@ -16,7 +16,7 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
-  'http://localhost:3000/assets/gg.js',
+  'http://localhost:80/assets/gg.js',
   'spec/js/*_spec.js',
   'spec/js/**/*_spec.js'
 ];

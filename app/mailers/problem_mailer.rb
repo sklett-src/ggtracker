@@ -1,8 +1,8 @@
 class ProblemMailer < ActionMailer::Base
-  default :from => "dsjoerg@ggtracker.com"
+  default :from => "gggreplays@gmail.com"
  
   def simple_problem(subject, problem)
     @problem = problem
-    mail(:to => 'dsjoerg@ggtracker.com', :subject => subject)
+    mail(:to => 'gggreplays@gmail.com', :subject => subject)
   end
 end

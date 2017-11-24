@@ -15,7 +15,7 @@
 
 backend default {
   .host = "127.0.0.1";
-  .port = "3000";
+  .port = "80";
 }
 
 # NOTE: vcl_recv is called at the beginning of a request, after the complete
