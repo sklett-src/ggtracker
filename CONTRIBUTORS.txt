@@ -1,6 +1,8 @@
 Contributors:
-    David Joerg - @dsjoerg on github
-    Marian Rudzynski - @fx on github
 
+new: Soeren Klett - @sklett-src on github
+
+#    David Joerg - @dsjoerg on github
+#    Marian Rudzynski - @fx on github
 
 Special thanks to Blizzard for their help and participation.
