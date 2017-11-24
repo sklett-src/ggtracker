@@ -43,8 +43,8 @@ class MatchesController < ApplicationController
 # and there is only one match, then we are in business!
 # 
 # then the prev match can be:
-# ggtracker.com/matches/prev?identity=<esdb_identity_id>&match=<esdb_match_id>
-# ggtracker.com/matches/next?identity=<esdb_identity_id>&match=<esdb_match_id>
+# gggreplays.com/matches/prev?identity=<esdb_identity_id>&match=<esdb_match_id>
+# gggreplays.com/matches/next?identity=<esdb_identity_id>&match=<esdb_match_id>
 # api.esdb.net/api/v1/matches/prev?identity=<esdb_identity_id>&match=<esdb_match_id>
 # api.esdb.net/api/v1/matches/next?identity=<esdb_identity_id>&match=<esdb_match_id>
 #

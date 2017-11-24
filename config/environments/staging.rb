@@ -2,12 +2,12 @@ Ggtracker::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Assets are served via S3
-  # TODO: A record for s3.*.ggtracker.com for nice hostnames.
-  # config.action_controller.asset_host = "http://s3.staging.ggtracker.com.s3.amazonaws.com"
+  # TODO: A record for s3.*.gggreplays.com for nice hostnames.
+  # config.action_controller.asset_host = "http://s3.staging.gggreplays.com.s3.amazonaws.com"
   #
   # no cloudfront for staging either!
   #
-  config.action_controller.asset_host = "http://a1s.ggtracker.com"
+  config.action_controller.asset_host = "http://a1s.gggreplays.com"
 
   # Code is not reloaded between requests
   config.cache_classes = true

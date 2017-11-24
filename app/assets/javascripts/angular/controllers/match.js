@@ -70,7 +70,7 @@ function($scope, $window, $route, $location, $element, Match) {
               history.back();
           },
           error: function() {
-              alert("Sorry, this match could not be deleted for some reason.  Please contact hello@ggtracker.com and they'll take care of it for you.");
+              alert("Sorry, this match could not be deleted for some reason.  Please contact gggreplays@gmail.com and they'll take care of it for you.");
           }
         });
     }

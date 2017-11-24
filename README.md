@@ -52,7 +52,7 @@ It'll work, but there will be no matches, no players.  To make it more
 interesting, you can simply point your ggtracker at the production
 ESDB server like so:
 
-`ESDB_HOST=api.ggtracker.com ESDB_MATCHBLOBS_BUCKET=gg2-matchblobs-prod foreman start web`
+`ESDB_HOST=api.gggreplays.com ESDB_MATCHBLOBS_BUCKET=gg2-matchblobs-prod foreman start web`
 
 And then go to http://localhost:3000/matches in your browser.  If you
 see recent matches, it's working!

@@ -36,7 +36,7 @@ gg.directive('uaccount', ['Account', function(Account) {
                       alert("We have started deleting your matches.");
                   },
                   error: function() {
-                      alert("Sorry, your matches could not be deleted for some reason.  Please contact hello@ggtracker.com and we will beat the person responsible.");
+                      alert("Sorry, your matches could not be deleted for some reason.  Please contact gggreplays@gmail.com and we will beat the person responsible.");
                   }
 
                   // next steps through the code:
