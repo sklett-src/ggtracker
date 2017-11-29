@@ -28,7 +28,8 @@ class PaymentController < ApplicationController
 
     # notify = Paypal::Notification.new(request.raw_post)
 
-    if params['txn_type'] == 'subscr_signup'
+	# TODO SKLETT PRO IS FREE CHANGE THIS LATER
+    if true || params['txn_type'] == 'subscr_signup'
 
       user = User.find(params['custom'].to_i)
 

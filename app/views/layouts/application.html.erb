@@ -119,9 +119,9 @@ _\%_____/\%_____/\%_____/\%_/   /\%___fx/\%_____/\__/   /\%_____/\__/   /.com_
 
         <a id="logo" class="logo logo20" target="_self" href="/">
           <% if !Rails.env.production? %>
-          <em>gg</em><%= Rails.env %>
+          <em>ggg</em>replays
           <% else %>
-          <em>gg</em>tracker
+          <em>ggg</em>replays
           <% end %>
         </a>
 
@@ -228,6 +228,7 @@ _\%_____/\%_____/\%_____/\%_/   /\%___fx/\%_____/\__/   /\%_____/\__/   /.com_
 
 
 <% if !controller.is_a?(HomeController) %>
+<% if false %>
  <script type="text/javascript">
   var uvOptions = {};
   (function() {
@@ -236,6 +237,7 @@ _\%_____/\%_____/\%_____/\%_/   /\%___fx/\%_____/\__/   /\%_____/\__/   /.com_
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
   })();
  </script>
+<% end %>
 <% end %>
 </body>
 </html>

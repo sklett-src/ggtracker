@@ -33,7 +33,7 @@ config/ey_services_config_local.yml
 config/secrets.yml
 config/s3.yml
 config/initializers/recaptcha.rb
-
+config/.routes.rb.swp
 # Ignore production config magic
 cookbooks
 

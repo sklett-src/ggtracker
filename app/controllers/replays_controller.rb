@@ -28,8 +28,8 @@ class ReplaysController < ApplicationController
 
         # welcome GGTracker partner
         params[:channel] = params[:token]
-
-      elsif current_user.nil? || !current_user.pro?
+# TODO SKLETT remove false to enable PRO subscriptions
+      elsif false || current_user.nil? || !current_user.pro?
 
         xml = Builder::XmlMarkup.new(indent: 2)
         xml.instruct!
