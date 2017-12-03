@@ -94,7 +94,9 @@
     </li>
   </ul>
   <% if current_user.pro? %>
-  <a class="add" href ng-click="addAccount()">GGTracker Pro: Add Another Account</a>
+  <% end %>
+  <% if false %>
+  <a class="add" href ng-click="addAccount()">GGGReplays Pro: Add Another Account</a>
   <br>
   <a class="add" href="cancel">Cancel GGTracker Pro</a>
   <% end %>

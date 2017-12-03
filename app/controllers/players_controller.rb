@@ -10,7 +10,8 @@ class PlayersController < ApplicationController
     # Was someone a naughty boy or girl and mess up the name?
     redirect_to :action => 'show', :id => params[:id], :name => @identity.name unless ( @identity.name == params[:name] || @identity.name == escaped_name )
 
-    @prolevel = 0
+# TODO SKLETT change back to 0
+    @prolevel = 1
     account = Account.find_by_esdb_id(@identity.id)
     if account.present?
       # Is the user a pro user?

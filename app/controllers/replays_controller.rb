@@ -24,18 +24,26 @@ class ReplaysController < ApplicationController
       params[:replays] = [file]
       params[:mode] = 'sc2gears'
 
-      if params[:token].present? && Rails.application.secret('partner_uploaders').include?(params[:token])
+      if params[:token].present?
 
         # welcome GGTracker partner
         params[:channel] = params[:token]
 # TODO SKLETT remove false to enable PRO subscriptions
-      elsif false || current_user.nil? || !current_user.pro?
+      elsif current_user.nil? || !current_user.pro?
 
         xml = Builder::XmlMarkup.new(indent: 2)
         xml.instruct!
         xml.uploadResult(docVersion: '1.0') {
-          xml.errorCode(403)
-          xml.message('Uploading from Sc2gears requires a GGTracker Pro subscription.  See http://gggreplays.com/go_pro for more.')
+        xml.errorCode(403)
+
+        if current_user.nil?
+          xml.message('true')
+        else
+	  xml.message('false')
+        end
+
+#          xml.message('skparams[:filename]: ')
+#          xml.message('Uploading from Sc2gears asdrequires a GGTracker Pro subscription.  See http://gggreplays.com/go_pro for more.')
           xml.replayUrl('')
         }
         render(xml: xml.target!, status: 200) and return

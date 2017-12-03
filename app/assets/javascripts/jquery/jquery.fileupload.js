@@ -483,6 +483,10 @@
             return this._enhancePromise(promise);
         },
 
+	_testSK: function () {
+		console.log("HELLO _testSK");
+	},
+
         // Uploads a file in multiple, sequential requests
         // by splitting the file up in multiple blob chunks.
         // If the second parameter is true, only tests if the file

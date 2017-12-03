@@ -1,5 +1,5 @@
 <div class="form form-join">
-  <div class="logo logo30"><em>GG</em>TRACKER</div>
+  <div class="logo logo30"><em>GGG</em>Replays</div>
 
   <%= semantic_form_for(resource, :method => 'post', :url => registration_path(:user)) do |f| %>
     <%= f.inputs do %>
@@ -14,7 +14,7 @@
 </div>
 
 <div class="form form-login">
-  <div class="logo logo30"><em>GG</em>TRACKER</div>
+  <div class="logo logo30"><em>GGG</em>Replays</div>
   <%= semantic_form_for(resource, :as => :user, :url => session_path(:user)) do |f| %>
     <span class="inline-errors"><%= flash[:alert] if flash[:alert] %></span>
   
@@ -37,7 +37,7 @@
 </div>
 
 <div class="form form-password">
-  <div class="logo logo30"><em>GG</em>TRACKER</div>
+  <div class="logo logo30"><em>GGG</em>Replays</div>
 
   <%= semantic_form_for(resource, :url => password_path(:user), :html => { :method => :post }) do |f| %>
     <%= f.inputs do %>

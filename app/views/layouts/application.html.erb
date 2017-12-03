@@ -11,7 +11,18 @@ _\%_____/\%_____/\%_____/\%_/   /\%___fx/\%_____/\__/   /\%_____/\__/   /.com_
 <!DOCTYPE html>
 <html ng-app="gg">
 <head>
-  <meta charset='utf-8'>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110397772-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110397772-1');
+</script>
+ 
+
+ <meta charset='utf-8'>
   <meta name="robots" content="all">
   <meta name="copyright" content="GGTracker">
   <meta name="content-language" content="en">
@@ -117,7 +128,7 @@ _\%_____/\%_____/\%_____/\%_/   /\%___fx/\%_____/\__/   /\%_____/\__/   /.com_
     <div class="content">
       <div class="left">
 
-        <a id="logo" class="logo logo20" target="_self" href="/">
+        <a id="logo" class="logo" target="_self" href="/">
           <% if !Rails.env.production? %>
           <em>ggg</em>replays
           <% else %>
@@ -149,7 +160,9 @@ _\%_____/\%_____/\%_____/\%_/   /\%___fx/\%_____/\__/   /\%_____/\__/   /.com_
               <li><a href="https://sites.google.com/site/scelight/">Scelight</a></li>
             </ul>
           </li>
-          <li><a class="menu-item" target="_self" href="/tour"><span>tour</span></a></li>
+          <!--li><a class="menu-item" target="_self" href="/tour"><span>tour</span></a></li-->
+          <li><a class="menu-item" target="_self" href="/feedback"><span>feedback-mail</span></a></li>
+          <li><a class="menu-item" target="_self" href="/support"><span>support GGG</span></a></li>
         </ul>
       </div>
 

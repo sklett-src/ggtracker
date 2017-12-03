@@ -399,13 +399,18 @@ notifyAboutUploadLimit = _.once(function() {
 
 $(function() {
 
+console.log('triggered something in gg.js')
+
   fuconfig = {
     url: 'https://' + gon.global.replays_bucket + '.s3.amazonaws.com',
     type: 'POST',
     autoUpload: true,
     dataType: 'xml',
     add: function(e, data) {
-//      console.log("add!", data.files.length);
+      console.log("add!", data.files.length);
+      console.log("add!", data.files[0]);
+	console.dir(data)
+console.dir(e)
 
       if (gg.state.iecompat) {
           alert("Our apologies, but this browser can't upload replays to GGTracker.  To upload replays, you can use Internet Explorer 10, Google Chrome, Firefox or Safari.");
@@ -457,6 +462,12 @@ $(function() {
         state: '-',
         replay_file_name: data.files[0].name
       };
+
+// TODO SKLETT scrap above for autouploader
+console.log('start X')
+console.log(replay)
+console.dir(replay)
+
       uploadScope.creplays.push(replay);
       uploadScope.allreplays.push(replay);
       throttledUploadDigest();
@@ -483,9 +494,12 @@ $(function() {
     },
 
     send: function(e, data) {
-      uploadScope = angular.element($('.uploads')).scope();
-      $.each(data.files, function(i, file) {
-        replay = _.find(uploadScope.creplays, function(rep) { return rep.replay_file_name == file.name })
+
+	console.log('sending!!!!')
+        uploadScope = angular.element($('.uploads')).scope();
+      	console.log(uploadScope)
+	$.each(data.files, function(i, file) {
+        replay = _.find(uploadScope.creplays, function(rep) {return rep.replay_file_name == file.name })
         if (! _.isUndefined(replay)) {
           replay.status = 'Uploading';
           setState(replay, 'Uploading');
@@ -522,7 +536,7 @@ $(function() {
     },
   
     done: function(e, data) {
-              // console.log("done! ", $(data.result.getElementsByTagName("Location")[0]).text(), data.files[0].name);
+     console.log("done! ", $(data.result.getElementsByTagName("Location")[0]).text(), data.files[0].name);
 
       $.ajax({
         url: '/replays/s3_drop',

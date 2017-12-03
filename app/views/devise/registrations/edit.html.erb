@@ -3,19 +3,18 @@
     <h2 class="first">Your Battle.Net Account</h2>
     <%= render 'accounts' %>
 
-    <% if false %>
+    <% if true %>
 
-    <h2>GGTracker Pro Auto-uploader</h2>
+    <h2>GGGReplays Pro(beta) Auto-uploader</h2>
 <ol class="instructions">
-<li>Download the auto-uploader: <a class="action button" href="https://s3.amazonaws.com/auto-uploader/ggtracker+uploader.zip">download</a></li>
-<li>Unzip it and start the version appropriate to your operating system.</li>
-<li>Click the Choose... button and pick a directory.  The auto-uploader will watch that directory and its subdirectories for new replays.</li>
-<li>Paste this code: <span class="token"><%= current_user.access_token %></span> into the Upload key field in the Auto-uploader window.</li>
-<li>Play Starcraft!  The auto-uploader will watch for any new replays and upload them to GGTracker.</li>
+<li>Download the auto-uploader: <a class="action button" href="https://s3.amazonaws.com/ggg-downloads/GGGReplays_Install.zip">Download</a></li>
+<li>Unzip it and start the install.bat (only once, it will start even when you restart your computer. you can see the process as "autouploader.exe" in your taskmanager)</li>
+<!--li>Paste this code: <span class="token"><%= current_user.access_token %></span> into the Upload key field in the Auto-uploader window.</li-->
+<li>Play Starcraft!  The auto-uploader will watch for any new replays and upload them to GGGReplays.</li>
     <% end %>
 
 
-    <% if true %>
+    <% if false %>
 
 
 </ol>
