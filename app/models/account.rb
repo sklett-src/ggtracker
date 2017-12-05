@@ -210,7 +210,20 @@ class Account < ActiveRecord::Base
   # Yes, it's presentation in a model, I'm sorry. The way we currently work,
   # we need this in the objects attributes for the frontend.
   def portrait_css(expected = false, size = 75)
+    #print "TEST"
     _portrait = expected ? expected_portrait : portrait
+
+begin
+    puts "ACC:3 " + _portrait
+rescue SystemCallError
+    puts "ACC:2 " + _portrait
+	
+#  raise
+end
+
+   # puts "ACC: " + expected if expected?
+    #puts "ACC: " + expected_portrait
+
     return 'display: none;' if !_portrait || _portrait.blank?
     portrait_position = BnetScraper::Starcraft2.portrait_position(_portrait)
     if portrait_position.present?

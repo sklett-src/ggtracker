@@ -48,7 +48,7 @@ describe Account do
   it 'should output correct portrait_css' do
     account = Account.new
     account.portrait = 'Thatcher'
-
+#	puts "ACC:4"
     account.portrait_css(false, 75).should == "background: url('/assets/sc2/portraits/0-75.jpg') -150px -0px no-repeat;"
   end
 end
