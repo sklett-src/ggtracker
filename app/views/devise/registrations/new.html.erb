@@ -4,11 +4,12 @@
   <%= devise_error_messages! %>
   <%= flash[:recaptcha_error] %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <div style="color:white"><%= f.label :email %><br /></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div style="margin-bottom: 10px">  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div style="color:white"><%= f.label :password %><br /></div>
+  <div style="margin-bottom: 10px"><%= f.password_field :password %></div>
 
   <div>
     <%= recaptcha_tags(stoken: false, ajax: true) %>
