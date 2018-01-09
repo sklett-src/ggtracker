@@ -1,5 +1,5 @@
 <script>
-console.log('test')
+console.log('grep this: player!')
 </script>
 <div id="player" ng-controller="PlayerController">
   <div id="heading" class="inset">
@@ -31,7 +31,6 @@ console.log('test')
           <%= image_tag "userlogos/#{player_logo(@identity)}" %>
         </div>
       <% end %>
-      
 
       <div class="info block
       <% if player_logo(@identity) %>
@@ -77,6 +76,10 @@ console.log('test')
   </div>
 
   <div class="center">
+<br>
+<b>If you have any problems with the site or ideas for improvements, please post them to <a style="color: blue" target="_blank" href="http://reddit.com/r/gggreplays">reddit.com/r/gggreplays</a></b>
+<br>
+<br>
     <%= render 'shared/sidebarad' %>    
 
     <matches data-collection="matches" data-identity="identity" data-stats="player" paginate="true" have-replay="true">

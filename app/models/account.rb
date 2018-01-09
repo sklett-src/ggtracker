@@ -213,13 +213,13 @@ class Account < ActiveRecord::Base
     #print "TEST"
     _portrait = expected ? expected_portrait : portrait
 
-begin
-    puts "ACC:3 " + _portrait
-rescue SystemCallError
-    puts "ACC:2 " + _portrait
+#begin
+#    puts "ACC:3 " + _portrait
+#rescue SystemCallError
+#    puts "ACC:2 " + _portrait
 	
 #  raise
-end
+#end
 
    # puts "ACC: " + expected if expected?
     #puts "ACC: " + expected_portrait

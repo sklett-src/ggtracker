@@ -7,8 +7,8 @@ module BnetScraper
   module Starcraft2
     # Returns the map file and position of a portrait by name
     def self.portrait_position(name)
-      print "Apple "
-      print "Apple puts"
+#      print "Apple "
+#      print "Apple puts"
       index = PORTRAITS.flatten(1).collect(&:downcase).index(name.to_s.downcase)
       if index.nil?
         return nil
