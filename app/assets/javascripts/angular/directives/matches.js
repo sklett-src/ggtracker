@@ -49,7 +49,27 @@ gg.directive('matches', ['Match', function(Match) {
 
       // sets location to show the given match very bluntly
       $scope.go = function(id) {
-        window.location = '/matches/' + id;
+       // window.location = '/matches/' + id;
+      }
+
+      $scope.go_middleclick = function(event, id) {
+	
+//	var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+	
+switch(event.which) {
+		case 1:
+			 window.location = '/matches/' + id;
+		break;
+		case 2:
+//			window.name = 'testsk'
+//var activeTab = $("[href=" + location.hash + "]");
+//localStorage.setItem("lastTab", $(this).attr('href'));
+			window.open('/matches/' + id, '_blank');
+//			window.open('', 'testsk').focus();
+break;
+		default:
+			window.open('/matches/' + id,'_blank');	
+	}
       }
 
       // bind our identity bind to urlFilter (uhhh)

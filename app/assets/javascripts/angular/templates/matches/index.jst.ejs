@@ -49,15 +49,14 @@
         <th class="league">avg league<b class="arrow"></b></th>
         <th class="date">played<b class="arrow"></b></th>
       </tr>
-      <tr ng-repeat="match in matches" ng-click="go(match.id)">
-        <td class="num">
+      <tr ng-repeat="match in matches" ng-click="go(match.id)" ng-mousedown="go_middleclick($event, match.id)">
+       <td class="num">
           {{ matches.total - (((matches.page-1) * matches.limit) + $index ) }}
           <div class="ggtipper2 icon icon-text-16" data-gravity='nw' title="{{match.my_matchnote.note}}" ng-show="match.hasMatchNote()"></div>
         </td>
         <td class="map nowrap"><a target="_self" href="/matches/{{ match.id }}">{{ match.map_name }}</a></td>
         <td class="type">{{ match.game_type }}</td>
-        <td class="matchup">
-          {{ match.matchup(identity.id) }}
+        <td class="matchup"><a target="_self" href="/matches/{{ match.id }}">{{ match.matchup(identity.id) }}
         </td>
         <td class="team1" ng-bind-html="match.team_names(1).join(', ')"></td>
         <td class="team2" ng-bind-html="match.team_names(2).join(', ')"></td>
@@ -85,3 +84,4 @@
   </div>
 
 </div>
+

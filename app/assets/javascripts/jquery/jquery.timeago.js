@@ -15,6 +15,8 @@
  */
 (function($) {
   $.timeago = function(timestamp) {
+//	console.log('timestamp')
+//	console.log(timestamp)
     if (timestamp instanceof Date) {
       return inWords(timestamp);
     } else if (typeof timestamp === "string") {
@@ -68,7 +70,7 @@
       }
 
       var seconds = Math.abs(distanceMillis) / 1000;
-      var minutes = seconds / 60;
+      var minutes = seconds / 60 - 60;
       var hours = minutes / 60;
       var days = hours / 24;
       var years = days / 365;
@@ -100,9 +102,16 @@
 
       function substitute(stringOrFunction, number) {
         var string = $.isFunction(stringOrFunction) ? stringOrFunction(number, distanceMillis) : stringOrFunction;
-        var value = ($l.numbers && $l.numbers[number]) || number;
+//console.log(stringOrFunction)
+//console.log(number)        
+var value = ($l.numbers && $l.numbers[number]) || number;
         return string.replace(/%d/i, value);
       }
+
+
+	//var skminutes =  substitute($l.minutes, Math.round(minutes))
+	//console.log(minutes)
+	//console.log(skminutes)
 
       var words = seconds < 45 && substitute($l.seconds, Math.round(seconds)) ||
         seconds < 90 && substitute($l.minute, 1) ||

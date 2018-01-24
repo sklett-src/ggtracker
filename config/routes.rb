@@ -114,6 +114,7 @@ Ggtracker::Application.routes.draw do
   match 'support' => 'home#support'
   match 'feedback' => 'home#feedback'
   match 'staircase' => 'home#staircase'
+  match 'aboutus' => 'home#aboutus'
   match 'secrettest' => 'home#secrettest'
   match 'home' => 'home#home'
   match 'landing_tour' => 'home#tour'

@@ -3,7 +3,7 @@
 
 // A bunch of (temporary?) generic mixins
 @mixin center {
-  width: $gg-width;
+  max-width: $gg-width;
   margin: 0px auto;
 }
 
@@ -132,7 +132,7 @@ header {
     position: relative;
 
     padding: 0px 0px;
-    width: $gg-width - 0px * 2;
+    max-width: $gg-width - 0px * 2;
 
     // Notes about the "centering" going on: the line-height and va:middle
     // constructs in header are very ..uncompromising currently. This whole

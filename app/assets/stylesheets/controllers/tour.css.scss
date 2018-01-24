@@ -1,7 +1,7 @@
 #tour {
   .content {
     @include center;
-    width: 1044px;
+    max-width: 1600px;
 
     min-height: 600px;
 //    max-width: 900px;
